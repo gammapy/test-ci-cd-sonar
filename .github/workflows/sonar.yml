@@ -113,3 +113,4 @@ jobs:
         with:
           args: >
             "-Dsonar.projectVersion=${{ env.PROJECT_VERSION }}"
+            "-Dsonar.branch.name=${{ github.event.workflow_run.head_branch }}"

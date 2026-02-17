@@ -31,4 +31,4 @@ gammapy =
     **/site-packages/test_ci_cd_sonar
     .tox/*/lib/python*/site-packages/test_ci_cd_sonar
     **/lib/python*/site-packages/test_ci_cd_sonar
-    /home/runner/work/test_ci_cd_sonar/test_ci_cd_sonar.tox/*/lib/python*/site-packages/test_ci_cd_sonar
+    /home/runner/work/test-ci-cd-sonar/test-ci-cd-sonar/.tox/*/lib/python*/site-packages/test_ci_cd_sonar

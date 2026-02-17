@@ -1,0 +1,34 @@
+[run]
+branch = True
+
+# Files and directories to omit from coverage measurement
+omit =
+    *test_init.py
+    */test_ci_cd_sonar/version*
+
+# Make filenames relative to the repository root
+# for the coverage report to match source paths in sonarqube
+relative_files = True
+source = test_ci_cd_sonar
+
+[report]
+# Lines to ignore in coverage reports
+exclude_lines =
+    pragma: no cover
+    except ImportError
+    raise AssertionError
+    raise NotImplementedError
+    def main\(.*\):
+    pragma: py{ignore_python_version}
+    def _ipython_key_completions_
+
+# Re-mapping paths: map equivalent locations of the code to the
+# first entry path so they match source paths in sonarqube analysis
+[paths]
+gammapy =
+    test_ci_cd_sonar
+    .tox/*/site-packages/test_ci_cd_sonar
+    **/site-packages/test_ci_cd_sonar
+    .tox/*/lib/python*/site-packages/test_ci_cd_sonar
+    **/lib/python*/site-packages/test_ci_cd_sonar
+    /home/runner/work/test_ci_cd_sonar/test_ci_cd_sonar.tox/*/lib/python*/site-packages/test_ci_cd_sonar

@@ -1,6 +1,5 @@
 """Testing CI and SonarQube for Gammapy."""
 
-
 from importlib.metadata import PackageNotFoundError, version
 
 try:

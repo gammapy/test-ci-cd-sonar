@@ -25,8 +25,8 @@ exclude_lines =
 # Re-mapping paths: map equivalent locations of the code to the
 # first entry path so they match source paths in sonarqube analysis
 [paths]
-gammapy =
-    test_ci_cd_sonar
+test_ci_cd_sonar =
+    test_ci_cd_sonar/
     .tox/*/site-packages/test_ci_cd_sonar
     **/site-packages/test_ci_cd_sonar
     .tox/*/lib/python*/site-packages/test_ci_cd_sonar

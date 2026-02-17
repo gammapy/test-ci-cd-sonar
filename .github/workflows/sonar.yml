@@ -87,6 +87,7 @@ jobs:
         with:
           args: >
             "-Dsonar.projectVersion=${{ env.PROJECT_VERSION }}"
+            "-Dsonar.branch.name=${{ github.event.workflow_run.head_branch }}"
 
       - name: Sonarqube Scan PR
         if: github.event.workflow_run.event == 'pull_request'
@@ -113,4 +114,4 @@ jobs:
         with:
           args: >
             "-Dsonar.projectVersion=${{ env.PROJECT_VERSION }}"
-            "-Dsonar.branch.name=${{ github.event.workflow_run.head_branch }}"
+            "-Dsonar.branch.name=${{ env.REF_NAME }}"

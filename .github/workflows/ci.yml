@@ -74,8 +74,6 @@ jobs:
 
       - name: Store info for sonar
         env:
-          REF_NAME: ${{ github.ref_name }}
-          REF_TYPE: ${{ github.ref_type }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
           SOURCE_REPOSITORY: ${{ github.event.pull_request.head.repo.full_name }}
           SOURCE_BRANCH: ${{ github.event.pull_request.head.ref }}
@@ -87,8 +85,6 @@ jobs:
           echo "SOURCE_BRANCH=${SOURCE_BRANCH:-}" >> sonar_env
           echo "TARGET_BRANCH=${TARGET_BRANCH:-}" >> sonar_env
           echo "PROJECT_VERSION=$(python -m setuptools_scm)" >> sonar_env
-          echo "REF_TYPE=${{ github.ref_type }}" >> sonar_env
-          echo "REF_NAME=${REF_NAME}" >> sonar_env
           cat sonar_env
 
       # upload coverage report for SonarQube workflow
